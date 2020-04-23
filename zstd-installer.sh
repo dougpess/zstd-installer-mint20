@@ -2,10 +2,10 @@
 
 apt update -qq
 apt install -y checkinstall build-essential
-cd /tmp
+cd $(mktemp -d)
 wget https://github.com/facebook/zstd/releases/download/v1.4.4/zstd-1.4.4.tar.gz -O zstd.tar.gz
 tar -xf zstd.tar.gz
-cd zstd-1.4.4
+cd zstd-*
 make
 echo y | checkinstall
 if ! grep -qx zstd /etc/initramfs-tools/modules; then echo zstd >> /etc/initramfs-tools/modules; fi
