@@ -3,8 +3,8 @@
 apt update -qq
 apt install -y checkinstall build-essential
 cd $(mktemp -d)
-wget https://github.com/facebook/zstd/releases/download/v1.4.8/zstd-1.4.8.tar.gz -O zstd.tar.gz
-tar -xf zstd.tar.gz
+wget https://github.com/facebook/zstd/archive/v1.4.8.tar.gz
+tar -xf *.tar.gz
 cd zstd-*
 make
 echo y | checkinstall
