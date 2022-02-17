@@ -3,7 +3,7 @@
 apt update -qq
 apt install -y checkinstall build-essential
 cd $(mktemp -d)
-wget https://github.com/facebook/zstd/archive/v1.4.8.tar.gz
+wget https://github.com/facebook/zstd/archive/v1.5.2.tar.gz
 tar -xf *.tar.gz
 cd zstd-*
 make
